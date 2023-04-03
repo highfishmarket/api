@@ -28,7 +28,7 @@ class ArticleController extends Controller
     }
     function delete(Request $request, Article $article)
     {
-        Article::find($id)->delete();
+        Article::find($article)->delete();
         return response()->json(null, 204);
     }
 }
